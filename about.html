@@ -1,1 +1,50 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Про мене</title>
+<link href="style.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<button class="theme-toggle-btn" onclick="toggleTheme()">Тема</button>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+  <a class="navbar-brand" href="index.html">Мій сайт</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html">Головна</a></li>
+      <li class="nav-item"><a class="nav-link active" href="about.html">Про мене</a></li>
+      <li class="nav-item"><a class="nav-link" href="contacts.html">Контакти</a></li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+<main class="container my-5">
+<h1 class="mb-4">Про мене</h1>
+<p>Привіт! 👋 Мене звати [Твоє ім’я].</p>
+<p>Це мій перший сайт на Bootstrap, де я тренуюсь робити прості веб-сторінки.</p>
+<p>Я люблю вчитися новому та створювати цікаві проєкти.</p>
+<a href="index.html" class="btn btn-secondary">Назад на головну</a>
+</main>
+
+<footer class="bg-dark text-white text-center py-3">
+<p class="mb-0">© 2025 Мій Bootstrap сайт</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function toggleTheme() {
+document.body.classList.toggle('dark-theme');
+document.body.classList.toggle('light-theme');
+}
+document.body.classList.add('light-theme');
+</script>
+
+</body>
+</html>
 
