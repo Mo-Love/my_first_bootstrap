@@ -1,1 +1,70 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Мій Bootstrap сайт</title>
+<link href="style.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<button class="theme-toggle-btn" onclick="toggleTheme()">Тема</button>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+  <a class="navbar-brand" href="index.html">Мій сайт</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link active" href="index.html">Головна</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">Про мене</a></li>
+      <li class="nav-item"><a class="nav-link" href="contacts.html">Контакти</a></li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+<header class="bg-light text-center py-5">
+<div class="container">
+<h1 class="display-4">Привіт, світ! 🚀</h1>
+<p class="lead">Головна сторінка мого сайту на Bootstrap 5.</p>
+<a href="about.html" class="btn btn-primary btn-lg">Дізнатися більше</a>
+</div>
+</header>
+
+<main class="container my-5">
+<div class="row">
+  <div class="col-md-4">
+    <h3>Карточка 1</h3>
+    <p>Тут можна описати будь-що.</p>
+  </div>
+  <div class="col-md-4">
+    <h3>Карточка 2</h3>
+    <p>Можна додати фото, посилання або кнопки.</p>
+  </div>
+  <div class="col-md-4">
+    <h3>Карточка 3</h3>
+    <p>Сайт можна кастомізувати під себе.</p>
+  </div>
+</div>
+</main>
+
+<footer class="bg-dark text-white text-center py-3">
+<p class="mb-0">© 2025 Мій Bootstrap сайт</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function toggleTheme() {
+document.body.classList.toggle('dark-theme');
+document.body.classList.toggle('light-theme');
+}
+document.body.classList.add('light-theme');
+</script>
+
+</body>
+</html>
 
