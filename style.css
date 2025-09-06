@@ -28,11 +28,11 @@ nav.navbar { font-family: 'Roboto Slab', serif; font-weight: 700; }
 
 .theme-toggle-btn {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
     z-index: 1000;
     padding: 0.5rem 1rem;
-    background-color: #ffb347;
+    background-color: ##020269;
     border: none;
     border-radius: 5px;
     cursor: pointer;
