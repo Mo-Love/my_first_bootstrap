@@ -77,6 +77,89 @@
         </div>
     </section>
 
+    <!-- Додай після секції галереї -->
+<section class="py-5 bg-gradient" style="background: linear-gradient(to bottom, #e8f5e8, #fff3cd);">
+    <div class="container">
+        <h2 class="text-center mb-5" style="color: #d63031;">Розкажи казку: Подорож Колобка</h2>
+        <div id="storyCarousel" class="carousel slide" data-bs-ride="false"> <!-- Ручний слайдер для контролю -->
+            <div class="carousel-inner">
+                <!-- Етап 1: Хата -->
+                <div class="carousel-item active text-center">
+                    <img src="img/grandparents.jpg" class="d-block mx-auto story-img" alt="Дідусь і бабуся печуть Колобка" style="max-height: 500px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <div class="carousel-caption d-block">
+                        <h3>Жили-були дідусь та бабуся...</h3>
+                        <p class="description mx-auto" style="max-width: 600px;">У затишній хатці з солом'яним дахом бабуся замісила тісто. "Я зліплю Колобка!" – сказала вона. І ось – золотий, рум'яний, з вишневими губками!</p>
+                        <button class="btn btn-warning me-2" onclick="playSong(1)">🎵 Почуй пісеньку</button>
+                        <button class="btn btn-outline-primary" onclick="colorThis()">Розфарбуй!</button>
+                    </div>
+                </div>
+                <!-- Етап 2: Колобок котиться -->
+                <div class="carousel-item text-center">
+                    <img src="img/kolobok-forest.jpg" class="d-block mx-auto story-img" alt="Колобок у лісі">
+                    <div class="carousel-caption d-block">
+                        <h3>Колобок втік!</h3>
+                        <p class="description mx-auto">З вікна хати – тра-бах! – і покотився стежкою. "Я Колобок, я Колобок, я від діда відійшов, від бабусі відійшов!" – співав він весело.</p>
+                        <button class="btn btn-warning me-2" onclick="playSong(2)">🎵 Почуй пісеньку</button>
+                        <button class="btn btn-outline-primary" onclick="colorThis()">Розфарбуй!</button>
+                    </div>
+                </div>
+                <!-- Додай інші етапи: вовк, заєць, ведмідь, лисиця... Аналогічно, з твоїми img -->
+                <!-- Приклад для вовка -->
+                <div class="carousel-item text-center">
+                    <img src="img/kolobok-wolf.jpg" class="d-block mx-auto story-img" alt="Зустріч з вовком">
+                    <div class="carousel-caption d-block">
+                        <h3>Зустрів вовка...</h3>
+                        <p class="description mx-auto">"Колобок, Колобок, я тебе з'їм!" – заворив Вовк. Але Колобок заспівав: "Я від діда... від бабусі... від зайця...". І покотився далі!</p>
+                        <div class="quiz mt-3">
+                            <p><strong>Що заспівав Колобок?</strong></p>
+                            <button class="btn btn-sm btn-success" onclick="correct()">Правильно!</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Кінець: Лисиця -->
+                <div class="carousel-item text-center">
+                    <img src="data:image/png;base64,[тут base64 твоєї ілюстрації з лисицею]" class="d-block mx-auto story-img" alt="Лисичка обманює Колобка">
+                    <div class="carousel-caption d-block">
+                        <h3>Та хитра Лисичка...</h3>
+                        <p class="description mx-auto">Сіла на пеньок і заспівала разом. "Сідай на носик!" – попросила. Колобок сів – і... пуф! Казка скінчилася. Але мудрість лишилася: будь обережним з хитрими!</p>
+                        <a href="#buy-section" class="btn btn-warning btn-lg">Хочеш продовжити? Купи розмальовку!</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#storyCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#storyCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        <div class="text-center mt-4">
+            <p class="small">Свайпни або клікни стрілки, щоб котитися далі. Для малечі – з мамою чи татом!</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .story-img:hover { transform: rotate(5deg); transition: 0.3s; } /* Анімація "кивка" */
+    .quiz { background: #fff3cd; padding: 10px; border-radius: 10px; }
+</style>
+
+<script>
+    function playSong(stage) {
+        // Вбудовуємо YouTube: адаптуй URL з твого каналу
+        const videos = {1: 'https://www.youtube.com/embed/VIDEO_ID_ПІСЕНЬКИ', 2: '...'};
+        const iframe = document.createElement('iframe');
+        iframe.src = videos[stage] || videos[1];
+        iframe.width = '300'; iframe.height = '200'; iframe.allowFullscreen = true;
+        document.body.appendChild(iframe); // Або модал
+    }
+    function colorThis() {
+        // Простий JS-фільтр для контуру (використай library як fabric.js для повного малювання)
+        alert('Режим розмальовки! Обери кольори та малюй мишкою.'); // Заміни на реальний Canvas
+    }
+    function correct() { alert('Браво! 🌟 Ти знаєш казку!'); }
+</script>
+
     <!-- Опис продукту -->
     <section class="py-5">
         <div class="container">
